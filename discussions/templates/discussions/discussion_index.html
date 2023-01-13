@@ -1,0 +1,12 @@
+{% extends 'discussions/base.html' %}
+{% block content %}
+{% if discussions_list %}
+    <ul>
+    {% for discussion in discussions_list %}
+        <li><a href="/discussions/{{ discussion.id }}/">{{ discussion.book_title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No meetings are scheduled yet.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'discussions/base.html' %}
+{% block content %}
+    <h1><a href='/discussions'>Discussions</a> / {{ discussion.book_title }}</h1>
+    <ul>
+    {% for thread in threads_list %}
+        <li><a href="/discussions/{{ discussion.id }}/threads/{{ thread.id}}">{{ thread.topic }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
